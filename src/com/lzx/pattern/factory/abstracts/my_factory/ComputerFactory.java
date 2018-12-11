@@ -1,12 +1,14 @@
 package com.lzx.pattern.factory.abstracts.my_factory;
 
-import com.lzx.pattern.factory.abstracts.my_compoent.KeyBoard;
-import com.lzx.pattern.factory.abstracts.my_compoent.Mouse;
+import com.lzx.pattern.factory.abstracts.my_compoent.Compoents;
 import com.lzx.pattern.factory.abstracts.my_computer.Computer;
 
-public abstract class ComputerFactory {
-    abstract Mouse createdMouse();
-    abstract KeyBoard createdKeyBoard();
+public interface ComputerFactory {
+    Compoents createdMouse();
 
-    abstract Computer getBrand();
+    Compoents createdKeyBoard();
+
+    Compoents createdScreen();
+
+    Computer getBrand();
 }
